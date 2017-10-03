@@ -22,6 +22,8 @@
 		22B953371F81655B0068E2AC /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B953361F81655B0068E2AC /* LyricsViewController.swift */; };
 		22B9533D1F816E360068E2AC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9533C1F816E360068E2AC /* Utility.swift */; };
 		22B9533F1F8170820068E2AC /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9533E1F8170820068E2AC /* APIUrls.swift */; };
+		22E9A3491F840A8400A3B1B7 /* TracksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */; };
+		22E9A34C1F840B5700A3B1B7 /* TracksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		22B953361F81655B0068E2AC /* LyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
 		22B9533C1F816E360068E2AC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		22B9533E1F8170820068E2AC /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksCollectionViewCell.swift; sourceTree = "<group>"; };
+		22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TracksCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			children = (
 				22B953361F81655B0068E2AC /* LyricsViewController.swift */,
 				222B62991F81596200726D7E /* SearchViewController.swift */,
+				22E9A34A1F840A8A00A3B1B7 /* Cells */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +190,15 @@
 				2249E85A1F830A69002A1362 /* Serialization.swift */,
 			);
 			name = RestServices;
+			sourceTree = "<group>";
+		};
+		22E9A34A1F840A8A00A3B1B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */,
+				22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E9A34C1F840B5700A3B1B7 /* TracksCollectionViewCell.xib in Resources */,
 				222B62761F81593D00726D7E /* LaunchScreen.storyboard in Resources */,
 				222B62731F81593D00726D7E /* Assets.xcassets in Resources */,
 				222B62711F81593D00726D7E /* Main.storyboard in Resources */,
@@ -327,6 +342,7 @@
 				221AF2371F82C3690058FC02 /* NetworkRequest.swift in Sources */,
 				221AF2321F8291060058FC02 /* Track.swift in Sources */,
 				22B953371F81655B0068E2AC /* LyricsViewController.swift in Sources */,
+				22E9A3491F840A8400A3B1B7 /* TracksCollectionViewCell.swift in Sources */,
 				22B9533F1F8170820068E2AC /* APIUrls.swift in Sources */,
 				2249E85D1F830AE1002A1362 /* APIResources.swift in Sources */,
 				2249E85B1F830A69002A1362 /* Serialization.swift in Sources */,

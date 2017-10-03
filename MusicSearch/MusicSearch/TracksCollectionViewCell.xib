@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TracksCell" id="8LN-eA-2In" customClass="TracksCollectionViewCell" customModule="MusicSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="666" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="666" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smm-0B-ATq">
+                        <rect key="frame" x="8" y="8" width="649" height="136"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZA4-nz-naC">
+                                <rect key="frame" x="0.0" y="0.0" width="10" height="136"/>
+                                <color key="backgroundColor" red="0.494728732" green="0.66999127540000003" blue="0.6677370292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="jAB-tP-pgI"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ia8-54-J6e">
+                                <rect key="frame" x="18" y="12" width="107" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="fDb-za-5V4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAX-1t-sGC">
+                                <rect key="frame" x="133" y="12" width="508" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rOg-TA-o5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBm-Dl-20l">
+                                <rect key="frame" x="133" y="95" width="508" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TmE-xB-qGJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3X-3Q-oXM">
+                                <rect key="frame" x="133" y="66" width="508" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wa0-bP-sCo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ia8-54-J6e" secondAttribute="bottom" constant="11" id="35x-wC-70y"/>
+                            <constraint firstItem="O3X-3Q-oXM" firstAttribute="top" secondItem="tAX-1t-sGC" secondAttribute="bottom" constant="10" id="8RR-qi-Xv4"/>
+                            <constraint firstItem="ZA4-nz-naC" firstAttribute="leading" secondItem="smm-0B-ATq" secondAttribute="leading" id="AAy-Ga-VrR"/>
+                            <constraint firstAttribute="bottom" secondItem="ZA4-nz-naC" secondAttribute="bottom" id="Bky-EM-0mW"/>
+                            <constraint firstAttribute="trailing" secondItem="tAX-1t-sGC" secondAttribute="trailing" constant="8" id="IUB-cs-xsW"/>
+                            <constraint firstItem="tAX-1t-sGC" firstAttribute="leading" secondItem="ia8-54-J6e" secondAttribute="trailing" constant="8" id="Twk-jZ-9cL"/>
+                            <constraint firstAttribute="trailing" secondItem="JBm-Dl-20l" secondAttribute="trailing" constant="8" id="WJV-GX-a3Z"/>
+                            <constraint firstItem="ZA4-nz-naC" firstAttribute="top" secondItem="smm-0B-ATq" secondAttribute="top" id="Zzj-Fw-WMX"/>
+                            <constraint firstItem="O3X-3Q-oXM" firstAttribute="leading" secondItem="ia8-54-J6e" secondAttribute="trailing" constant="8" id="dWy-gR-caM"/>
+                            <constraint firstAttribute="height" constant="136" id="kan-IA-dhc"/>
+                            <constraint firstItem="JBm-Dl-20l" firstAttribute="top" secondItem="O3X-3Q-oXM" secondAttribute="bottom" constant="8" id="kzb-0w-rZA"/>
+                            <constraint firstItem="ia8-54-J6e" firstAttribute="leading" secondItem="ZA4-nz-naC" secondAttribute="trailing" constant="8" id="l5J-sD-Q07"/>
+                            <constraint firstItem="tAX-1t-sGC" firstAttribute="top" secondItem="smm-0B-ATq" secondAttribute="top" constant="12" id="mC1-mf-Xht"/>
+                            <constraint firstItem="JBm-Dl-20l" firstAttribute="leading" secondItem="ia8-54-J6e" secondAttribute="trailing" constant="8" id="pDh-zr-W0G"/>
+                            <constraint firstAttribute="trailing" secondItem="O3X-3Q-oXM" secondAttribute="trailing" constant="8" id="yNK-il-YUI"/>
+                            <constraint firstItem="ia8-54-J6e" firstAttribute="top" secondItem="smm-0B-ATq" secondAttribute="top" constant="12" id="zr3-T3-jgA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="smm-0B-ATq" firstAttribute="centerY" secondItem="TEg-FE-hvL" secondAttribute="centerY" id="baq-9B-Ioh"/>
+                <constraint firstItem="TEg-FE-hvL" firstAttribute="trailing" secondItem="smm-0B-ATq" secondAttribute="trailing" constant="9" id="kaA-5F-1Lx"/>
+                <constraint firstItem="smm-0B-ATq" firstAttribute="centerX" secondItem="TEg-FE-hvL" secondAttribute="centerX" id="mgZ-jy-Wgb"/>
+                <constraint firstItem="smm-0B-ATq" firstAttribute="leading" secondItem="TEg-FE-hvL" secondAttribute="leading" constant="8" id="xK7-gA-Jyp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TEg-FE-hvL"/>
+            <size key="customSize" width="666" height="153"/>
+            <connections>
+                <outlet property="trackAlbumLabel" destination="O3X-3Q-oXM" id="ajr-zg-i1Y"/>
+                <outlet property="trackArtistLabel" destination="JBm-Dl-20l" id="d8c-Aq-J7Y"/>
+                <outlet property="trackBgView" destination="smm-0B-ATq" id="eX3-zF-xVA"/>
+                <outlet property="trackColorView" destination="ZA4-nz-naC" id="z2e-ma-2Qu"/>
+                <outlet property="trackCoverImageView" destination="ia8-54-J6e" id="XZ7-tx-qqF"/>
+                <outlet property="trackNameLabel" destination="tAX-1t-sGC" id="VfG-0I-MP3"/>
+            </connections>
+            <point key="canvasLocation" x="-133" y="-72.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
