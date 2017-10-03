@@ -50,22 +50,14 @@ private extension SearchViewController {
             self?.turnOffActivityIndicator()
             if (tracks != nil){
                 print("Results received: \(tracks ?? [])")
+                
+                
+                
             } else {
                 print ("No results received")
             }
         }
     }
-    
-    
-    /*
-    func fetchTracks(track : String) {
-        
-        let tracksRequest = TracksRequest(url : APIUrls.getSearchSongUrl(searchedText: track))
-        self.request = tracksRequest
-        tracksRequest.load(withCompletion: { /*[weak self]*/ (data: Data?) in
-            print("Data: \()")
-        })
-    }*/
     
     func turnOnActivityIndicator() {
         if (self.activityIndicator.isHidden){

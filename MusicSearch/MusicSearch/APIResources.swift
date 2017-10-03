@@ -8,16 +8,16 @@
 import Foundation
 
 struct ApiWrapper {
-    let items: [Serialization]
+    let results: [Serialization]
 }
 
 extension ApiWrapper {
     private enum Keys: String, SerializationKey {
-        case items
+        case results
     }
     
     init(serialization: Serialization) {
-        items = serialization.value(forKey: Keys.items) ?? []
+        results = serialization.value(forKey: Keys.results) ?? []
     }
 }
 
@@ -35,8 +35,9 @@ extension ApiResource {
         guard let jsonSerialization = json as? Serialization else {
             return nil
         }
+        
         let wrapper = ApiWrapper(serialization: jsonSerialization)
-        return wrapper.items.map(makeModel(serialization:))
+        return wrapper.results.map(makeModel(serialization:))
     }
 }
 
