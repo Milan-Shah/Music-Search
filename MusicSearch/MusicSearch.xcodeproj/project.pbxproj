@@ -24,6 +24,7 @@
 		22B9533F1F8170820068E2AC /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9533E1F8170820068E2AC /* APIUrls.swift */; };
 		22E9A3491F840A8400A3B1B7 /* TracksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */; };
 		22E9A34C1F840B5700A3B1B7 /* TracksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */; };
+		22E9A34E1F841CDB00A3B1B7 /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A34D1F841CDB00A3B1B7 /* ImageCacheLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		22B9533E1F8170820068E2AC /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
 		22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksCollectionViewCell.swift; sourceTree = "<group>"; };
 		22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TracksCollectionViewCell.xib; sourceTree = "<group>"; };
+		22E9A34D1F841CDB00A3B1B7 /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				22B953401F81708E0068E2AC /* ViewControllers */,
 				22B953411F81709D0068E2AC /* RestServices */,
 				22B9533C1F816E360068E2AC /* Utility.swift */,
+				22E9A34D1F841CDB00A3B1B7 /* ImageCacheLoader.swift */,
 				221AF2301F817AE40058FC02 /* Fonts */,
 				222B62721F81593D00726D7E /* Assets.xcassets */,
 				222B62741F81593D00726D7E /* LaunchScreen.storyboard */,
@@ -339,6 +342,7 @@
 				222B629A1F81596200726D7E /* SearchViewController.swift in Sources */,
 				222B626E1F81593D00726D7E /* ViewController.swift in Sources */,
 				22B9533D1F816E360068E2AC /* Utility.swift in Sources */,
+				22E9A34E1F841CDB00A3B1B7 /* ImageCacheLoader.swift in Sources */,
 				221AF2371F82C3690058FC02 /* NetworkRequest.swift in Sources */,
 				221AF2321F8291060058FC02 /* Track.swift in Sources */,
 				22B953371F81655B0068E2AC /* LyricsViewController.swift in Sources */,

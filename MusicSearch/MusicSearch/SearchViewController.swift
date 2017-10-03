@@ -17,6 +17,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     fileprivate var request: AnyObject?
     fileprivate var tracksArray = [Track]()
+    fileprivate var imageLoader = ImageCacheLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +71,25 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.layer.shadowColor = UIColor.black.cgColor
         
         let trackObj : Track = self.trackForIndexPath(indexPath: indexPath)
-        cell.trackNameLabel.text = trackObj.name
-        cell.trackAlbumLabel.text = trackObj.album
-        cell.trackArtistLabel.text = trackObj.artist
-        cell.trackCoverImageView.image = nil
+
+        if let tName = trackObj.name {
+            cell.trackNameLabel.text = tName
+        }
+        if let tAlbum = trackObj.album {
+            cell.trackAlbumLabel.text = tAlbum
+        }
+        if let tArtist = trackObj.artist {
+            cell.trackArtistLabel.text = tArtist
+        }
+        if let coverImageURL = trackObj.cover {
+            imageLoader.obtainImageWithPath(imagePath: coverImageURL.absoluteString, completionHandler: { (coverImage) in
+                if let updateCell : TracksCollectionViewCell = collectionView.cellForItem(at: indexPath) as? TracksCollectionViewCell{
+                    updateCell.trackCoverImageView.image = coverImage
+                }
+                
+            })
+        }
+        
         return cell;
         
     }
@@ -124,7 +140,7 @@ private extension SearchViewController {
     }
     
     func trackForIndexPath(indexPath : IndexPath) -> Track {
-        return tracksArray[(indexPath as NSIndexPath).section]
+        return tracksArray[indexPath.row]
     }
 
 }
