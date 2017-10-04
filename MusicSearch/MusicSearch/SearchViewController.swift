@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
@@ -27,10 +27,10 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.activityIndicator.isHidden = true
         setUpCollectionView()
         self.navigationController?.navigationBar.isHidden = true
-        
+        self.searchTextField.delegate = self
         self.searchTextField.text = "Post Malone"
         searchButtonClicked(self)
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func searchButtonClicked(_ sender: Any) {
@@ -40,6 +40,12 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         } else {
             print("Please enter the name of the track you would like to search!")
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        searchButtonClicked(self)
+        return true
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

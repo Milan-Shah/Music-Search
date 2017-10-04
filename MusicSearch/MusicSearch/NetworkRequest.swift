@@ -24,7 +24,6 @@ extension NetworkRequest {
                 completion(nil)
                 return
             }
-            print("Data: \(data)")
             completion(self?.decode(data))
         })
         task.resume()

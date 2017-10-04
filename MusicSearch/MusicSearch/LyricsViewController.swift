@@ -24,6 +24,7 @@ class LyricsViewController: UIViewController {
         super.viewDidLoad()
         self.activityIndicator.isHidden = true
         setUpUI()
+        self.hideKeyboardWhenTappedAround()
     }
 
     func setUpUI() {
@@ -73,12 +74,13 @@ private extension LyricsViewController {
         let lyricsResource = LyricsResource()
         let lyricsRequest = ApiRequest(resource: lyricsResource, url: APIUrls.getLyricsOfSongUrl(artistName: artistName, songName: songName))
         request = lyricsRequest
-        lyricsRequest.load { [weak self] (lyricsO: [Lyrics]?) in
+        lyricsRequest.load { [weak self] (lyricsArray: [Lyrics]?) in
             self?.turnOffActivityIndicator()
-            if (lyricsO != nil){
-                print("Results received:)")
+            if (lyricsArray != nil){
+                let lyricsObject = lyricsArray?.first
+                self?.lyricsTextView.text = lyricsObject?.lyrics
             } else {
-                print ("No results received")
+                self?.lyricsTextView.text = "No results received from an API."
             }
         }
     }

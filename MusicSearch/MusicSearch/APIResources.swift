@@ -28,9 +28,8 @@ protocol ApiResource {
 }
 
 extension ApiResource {
+    
     func makeModel(data: Data) -> [Model]? {
-        
-        
         var json = try? JSONSerialization.jsonObject(with: data, options: [.mutableContainers,.allowFragments])
         
         if (json == nil){
@@ -40,12 +39,26 @@ extension ApiResource {
             var js = String(substring)
             js = js.replace(target: "'", withString: "\"")
             js = js.replace(target: "\n", withString: " ")
-            print("JSON String : \(js)")
-            let data : Data? = js.data(using: .utf8, allowLossyConversion: false)
-            if let jsonData = data {
-                json = try? JSONSerialization.jsonObject(with: jsonData, options: [.mutableContainers,.allowFragments])
+            
+            var jsonDict: [String: Any] = [:]
+            if let data : Data = js.data(using: .utf8, allowLossyConversion: false){
+                do {
+                    jsonDict = (try JSONSerialization.jsonObject(with: data, options:[.mutableContainers,.allowFragments]) as? [String: Any])!
+                    var arrayObject: [Any] = []
+                    arrayObject.append(jsonDict)
+                    print("JSON DICT: \(arrayObject)")
+                    
+                    var dict : Dictionary <String, Any> = [:]
+                    dict["results"] = arrayObject
+                    print("Dict: \(dict)")
+                    json = dict
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
+            
         }
+        
         
         guard let jsonSerialization = json as? Serialization else {
             return nil
