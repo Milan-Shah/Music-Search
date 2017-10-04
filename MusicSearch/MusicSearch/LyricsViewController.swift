@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 class LyricsViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lyricsTextView: UITextView!
     @IBOutlet weak var albumCoverImageView: UIImageView!
     @IBOutlet weak var trackNameLabel: UILabel!
@@ -20,6 +21,7 @@ class LyricsViewController: UIViewController {
     var selectedTrackObj: Track! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicator.isHidden = true
         setUpUI()
     }
 
@@ -58,5 +60,39 @@ class LyricsViewController: UIViewController {
     @IBAction func backBarButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+}
+
+private extension LyricsViewController {
+    
+    func fetchLyrics(artistName : String, songName : String) {
+        let tracksResource = TracksResource()
+        let tracksRequest = ApiRequest(resource: tracksResource, url: APIUrls.getLyricsOfSongUrl(artistName: artistName, songName: songName))
+        request = tracksRequest
+        tracksRequest.load { [weak self] (tracks: [Track]?) in
+            self?.turnOffActivityIndicator()
+            if (tracks != nil){
+                print("Results received: \(tracks ?? [])")
+                self?.tracksArray = tracks!
+                self?.resultsCollectionView.reloadData()
+            } else {
+                print ("No results received")
+            }
+        }
+    }
+    
+    func turnOnActivityIndicator() {
+        if (self.activityIndicator.isHidden){
+            self.activityIndicator.startAnimating()
+            self.activityIndicator.isHidden = false
+        }
+    }
+    
+    func turnOffActivityIndicator() {
+        if (!self.activityIndicator.isHidden){
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+        }
+    }
+    
 }
 

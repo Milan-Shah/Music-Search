@@ -112,11 +112,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
 
 private extension SearchViewController {
     
-    func configureCollectionUI (with track : Track){
-        print ("Tracks received. Refresh Collection UI")
-    }
-
-    
     func fetchTracks(track : String) {
         let tracksResource = TracksResource()
         let tracksRequest = ApiRequest(resource: tracksResource, url: APIUrls.getSearchSongUrl(searchedText: track))
@@ -158,6 +153,8 @@ private extension SearchViewController {
         return tracksArray[indexPath.row]
     }
 
+    
+    
 }
 
 

@@ -132,7 +132,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jze-A3-v0p">
                                 <rect key="frame" x="16" y="259" width="288" height="309"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -215,9 +214,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="n93-pt-Yd2">
+                                <rect key="frame" x="150" y="233" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="K1s-ro-Hdk"/>
+                                    <constraint firstAttribute="height" constant="20" id="fAU-dl-RPY"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="n93-pt-Yd2" firstAttribute="centerY" secondItem="5UX-aG-Npp" secondAttribute="centerY" id="39u-Wj-7Uu"/>
                             <constraint firstItem="N1G-D1-jPY" firstAttribute="trailing" secondItem="jze-A3-v0p" secondAttribute="trailing" constant="16" id="8yL-bT-4oV"/>
                             <constraint firstItem="jze-A3-v0p" firstAttribute="leading" secondItem="N1G-D1-jPY" secondAttribute="leading" constant="16" id="DeM-j8-xdu"/>
                             <constraint firstItem="RXE-nx-HKn" firstAttribute="top" secondItem="tEc-4v-cMz" secondAttribute="top" constant="20" id="FDx-qd-cs4"/>
@@ -227,6 +234,7 @@
                             <constraint firstItem="yQt-G7-0rY" firstAttribute="leading" secondItem="N1G-D1-jPY" secondAttribute="leading" constant="16" id="LRa-Y4-d5Z"/>
                             <constraint firstItem="5UX-aG-Npp" firstAttribute="top" secondItem="yQt-G7-0rY" secondAttribute="bottom" constant="20" id="V57-Cv-Rcb"/>
                             <constraint firstItem="jze-A3-v0p" firstAttribute="centerX" secondItem="N1G-D1-jPY" secondAttribute="centerX" id="b8D-6N-jCz"/>
+                            <constraint firstItem="n93-pt-Yd2" firstAttribute="centerX" secondItem="yQt-G7-0rY" secondAttribute="centerX" id="cE0-eg-qeu"/>
                             <constraint firstItem="RXE-nx-HKn" firstAttribute="leading" secondItem="tEc-4v-cMz" secondAttribute="leading" id="hJM-Ot-gqC"/>
                             <constraint firstItem="5UX-aG-Npp" firstAttribute="leading" secondItem="tEc-4v-cMz" secondAttribute="leadingMargin" constant="12" id="pXq-5c-sRG"/>
                             <constraint firstItem="yQt-G7-0rY" firstAttribute="top" secondItem="RXE-nx-HKn" secondAttribute="bottom" constant="13" id="tVk-7j-1OH"/>
@@ -237,6 +245,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="n93-pt-Yd2" id="vpe-Cd-QdB"/>
                         <outlet property="albumCoverImageView" destination="mTW-5v-iEs" id="ksn-Kl-5VM"/>
                         <outlet property="albumNameLabel" destination="Tif-zX-Hpg" id="axw-DB-UAI"/>
                         <outlet property="artistNameLabel" destination="oay-dp-kVU" id="ra8-e5-jli"/>

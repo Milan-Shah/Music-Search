@@ -18,5 +18,17 @@ class APIUrls: NSObject {
         return URL(string : searchTrackString)!
     }
     
+    class func getLyricsOfSongUrl(artistName : String, songName : String) -> URL {
+        print("Making Song Lyrics API:::")
+        var searchSongUrl : String = "http://lyrics.wikia.com/api.php?func=getSong&artist="
+        let artist : String = artistName.replace(target: " ", withString: "+")
+        searchSongUrl.append(artist)
+        let name : String = songName.replace(target: " ", withString: "+")
+        searchSongUrl.append("&song=")
+        searchSongUrl.append(name)
+        searchSongUrl.append("&fmt=json")
+        print ("API GET URL : \(searchSongUrl)")
+        return URL(string : searchSongUrl)!
+    }
     
 }

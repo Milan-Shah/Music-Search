@@ -39,38 +39,3 @@ extension Track {
         }
     }
 }
-
-/*
-extension Track {
-    
-    init?(json: [String:Any]){
-        if let track_name = json["trackName"] as? String{
-            self.name = track_name
-        } else {
-            // Log it
-            return nil
-        }
-        
-        if let artist_name = json["artistName"] as? String{
-            self.artist = artist_name
-        } else {
-            // Log it
-            return nil
-        }
-        
-        if let album_name = json["collectionName"] as? String{
-            self.album = album_name
-        } else {
-            // Log it
-            return nil
-        }
-        
-        if let album_cover = json["artworkUrl100"] as? URL{
-            self.cover = album_cover
-        } else {
-            // Log it
-            return nil
-        }
-    }
-}
-*/
