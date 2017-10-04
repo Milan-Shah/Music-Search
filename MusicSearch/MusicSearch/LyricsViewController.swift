@@ -27,12 +27,18 @@ class LyricsViewController: UIViewController {
         if (selectedTrackObj != nil){
             if let tName = selectedTrackObj.name {
                 trackNameLabel.text = tName
+                trackNameLabel.lineBreakMode = .byWordWrapping
+                trackNameLabel.numberOfLines = 0
             }
             if let tAlbum = selectedTrackObj.album {
                 albumNameLabel.text = tAlbum
+                albumNameLabel.lineBreakMode = .byWordWrapping
+                albumNameLabel.numberOfLines = 0
             }
             if let tArtist = selectedTrackObj.artist {
                 artistNameLabel.text = tArtist
+                artistNameLabel.lineBreakMode = .byWordWrapping
+                artistNameLabel.numberOfLines = 0
             }
             if let coverImageURL = selectedTrackObj.cover {
                 

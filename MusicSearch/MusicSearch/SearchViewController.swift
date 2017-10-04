@@ -75,12 +75,18 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
 
         if let tName = trackObj.name {
             cell.trackNameLabel.text = tName
+            cell.trackNameLabel.lineBreakMode = .byWordWrapping
+            cell.trackNameLabel.numberOfLines = 0
         }
         if let tAlbum = trackObj.album {
             cell.trackAlbumLabel.text = tAlbum
+            cell.trackAlbumLabel.lineBreakMode = .byWordWrapping
+            cell.trackAlbumLabel.numberOfLines = 0
         }
         if let tArtist = trackObj.artist {
             cell.trackArtistLabel.text = tArtist
+            cell.trackArtistLabel.lineBreakMode = .byWordWrapping
+            cell.trackArtistLabel.numberOfLines = 0
         }
         if let coverImageURL = trackObj.cover {
             imageLoader.obtainImageWithPath(imagePath: coverImageURL.absoluteString, completionHandler: { (coverImage) in

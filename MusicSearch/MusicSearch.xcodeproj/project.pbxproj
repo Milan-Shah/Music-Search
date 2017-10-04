@@ -25,6 +25,9 @@
 		22E9A3491F840A8400A3B1B7 /* TracksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */; };
 		22E9A34C1F840B5700A3B1B7 /* TracksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */; };
 		22E9A34E1F841CDB00A3B1B7 /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A34D1F841CDB00A3B1B7 /* ImageCacheLoader.swift */; };
+		22E9A3511F8480C600A3B1B7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22E1F817ADF0058FC02 /* OpenSans-Bold.ttf */; };
+		22E9A3521F8480C800A3B1B7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22F1F817ADF0058FC02 /* OpenSans-Regular.ttf */; };
+		22E9A3531F8480CA00A3B1B7 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22D1F817ADE0058FC02 /* OpenSans-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +317,9 @@
 				22E9A34C1F840B5700A3B1B7 /* TracksCollectionViewCell.xib in Resources */,
 				222B62761F81593D00726D7E /* LaunchScreen.storyboard in Resources */,
 				222B62731F81593D00726D7E /* Assets.xcassets in Resources */,
+				22E9A3511F8480C600A3B1B7 /* OpenSans-Bold.ttf in Resources */,
+				22E9A3521F8480C800A3B1B7 /* OpenSans-Regular.ttf in Resources */,
+				22E9A3531F8480CA00A3B1B7 /* OpenSans-Semibold.ttf in Resources */,
 				222B62711F81593D00726D7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

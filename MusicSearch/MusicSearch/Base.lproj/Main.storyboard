@@ -130,14 +130,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jze-A3-v0p">
-                                <rect key="frame" x="16" y="238" width="288" height="330"/>
+                                <rect key="frame" x="16" y="259" width="288" height="309"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UX-aG-Npp">
+                                <rect key="frame" x="28" y="243" width="264" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QZZ-Pw-gM0"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQt-G7-0rY">
-                                <rect key="frame" x="16" y="60" width="288" height="146"/>
+                                <rect key="frame" x="16" y="77" width="288" height="146"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mTW-5v-iEs">
                                         <rect key="frame" x="8" y="8" width="109" height="130"/>
@@ -193,7 +200,10 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXE-nx-HKn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <items>
                                     <navigationItem title="Lyrics" id="nOZ-PY-xmS">
                                         <barButtonItem key="leftBarButtonItem" image="back" id="fpS-Vf-jA6">
@@ -205,30 +215,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UX-aG-Npp">
-                                <rect key="frame" x="28" y="223" width="264" height="1"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="QZZ-Pw-gM0"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N1G-D1-jPY" firstAttribute="trailing" secondItem="jze-A3-v0p" secondAttribute="trailing" constant="16" id="8yL-bT-4oV"/>
                             <constraint firstItem="jze-A3-v0p" firstAttribute="leading" secondItem="N1G-D1-jPY" secondAttribute="leading" constant="16" id="DeM-j8-xdu"/>
-                            <constraint firstItem="RXE-nx-HKn" firstAttribute="top" secondItem="tEc-4v-cMz" secondAttribute="top" id="FDx-qd-cs4"/>
+                            <constraint firstItem="RXE-nx-HKn" firstAttribute="top" secondItem="tEc-4v-cMz" secondAttribute="top" constant="20" id="FDx-qd-cs4"/>
                             <constraint firstItem="N1G-D1-jPY" firstAttribute="trailing" secondItem="yQt-G7-0rY" secondAttribute="trailing" constant="16" id="Fah-ec-xo6"/>
                             <constraint firstItem="jze-A3-v0p" firstAttribute="bottom" secondItem="N1G-D1-jPY" secondAttribute="bottom" id="H5r-da-vqZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5UX-aG-Npp" secondAttribute="trailing" constant="12" id="Ip6-Ex-Pb1"/>
                             <constraint firstItem="yQt-G7-0rY" firstAttribute="leading" secondItem="N1G-D1-jPY" secondAttribute="leading" constant="16" id="LRa-Y4-d5Z"/>
-                            <constraint firstItem="5UX-aG-Npp" firstAttribute="top" secondItem="yQt-G7-0rY" secondAttribute="bottom" constant="17" id="V57-Cv-Rcb"/>
+                            <constraint firstItem="5UX-aG-Npp" firstAttribute="top" secondItem="yQt-G7-0rY" secondAttribute="bottom" constant="20" id="V57-Cv-Rcb"/>
                             <constraint firstItem="jze-A3-v0p" firstAttribute="centerX" secondItem="N1G-D1-jPY" secondAttribute="centerX" id="b8D-6N-jCz"/>
                             <constraint firstItem="RXE-nx-HKn" firstAttribute="leading" secondItem="tEc-4v-cMz" secondAttribute="leading" id="hJM-Ot-gqC"/>
                             <constraint firstItem="5UX-aG-Npp" firstAttribute="leading" secondItem="tEc-4v-cMz" secondAttribute="leadingMargin" constant="12" id="pXq-5c-sRG"/>
-                            <constraint firstItem="yQt-G7-0rY" firstAttribute="top" secondItem="RXE-nx-HKn" secondAttribute="bottom" constant="16" id="tVk-7j-1OH"/>
+                            <constraint firstItem="yQt-G7-0rY" firstAttribute="top" secondItem="RXE-nx-HKn" secondAttribute="bottom" constant="13" id="tVk-7j-1OH"/>
                             <constraint firstItem="RXE-nx-HKn" firstAttribute="centerX" secondItem="yQt-G7-0rY" secondAttribute="centerX" id="trt-oj-mRF"/>
-                            <constraint firstItem="jze-A3-v0p" firstAttribute="top" secondItem="5UX-aG-Npp" secondAttribute="bottom" constant="14" id="txt-9E-eoJ"/>
+                            <constraint firstItem="jze-A3-v0p" firstAttribute="top" secondItem="5UX-aG-Npp" secondAttribute="bottom" constant="15" id="txt-9E-eoJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1G-D1-jPY"/>
                     </view>
