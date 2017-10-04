@@ -177,8 +177,8 @@
 		22B953401F81708E0068E2AC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				22B953361F81655B0068E2AC /* LyricsViewController.swift */,
 				222B62991F81596200726D7E /* SearchViewController.swift */,
+				22B953361F81655B0068E2AC /* LyricsViewController.swift */,
 				22E9A34A1F840A8A00A3B1B7 /* Cells */,
 			);
 			name = ViewControllers;

@@ -26,6 +26,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         searchButton.layer.cornerRadius = 10.0
         self.activityIndicator.isHidden = true
         setUpCollectionView()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func searchButtonClicked(_ sender: Any) {
@@ -92,6 +93,14 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         return cell;
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let trackObj : Track = self.trackForIndexPath(indexPath: indexPath)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let lvc = storyboard.instantiateViewController(withIdentifier: "LyricsVC") as! LyricsViewController
+        lvc.selectedTrackObj = trackObj
+        self.navigationController?.pushViewController(lvc, animated: true)
     }
 }
 
