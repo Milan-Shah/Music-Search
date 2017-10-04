@@ -17,6 +17,7 @@ class LyricsViewController: UIViewController {
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var customNavBar: UINavigationBar!
+    fileprivate var request: AnyObject?
     fileprivate var imageLoader = ImageCacheLoader()
     var selectedTrackObj: Track! = nil
     override func viewDidLoad() {
@@ -53,6 +54,9 @@ class LyricsViewController: UIViewController {
                     self.albumCoverImageView.image = coverImage
                 })
             }
+            
+            //fetching lyrics
+            fetchLyrics(artistName: selectedTrackObj.artist!, songName: selectedTrackObj.name!)
         }
         
     }
@@ -65,15 +69,14 @@ class LyricsViewController: UIViewController {
 private extension LyricsViewController {
     
     func fetchLyrics(artistName : String, songName : String) {
-        let tracksResource = TracksResource()
-        let tracksRequest = ApiRequest(resource: tracksResource, url: APIUrls.getLyricsOfSongUrl(artistName: artistName, songName: songName))
-        request = tracksRequest
-        tracksRequest.load { [weak self] (tracks: [Track]?) in
+        turnOnActivityIndicator()
+        let lyricsResource = LyricsResource()
+        let lyricsRequest = ApiRequest(resource: lyricsResource, url: APIUrls.getLyricsOfSongUrl(artistName: artistName, songName: songName))
+        request = lyricsRequest
+        lyricsRequest.load { [weak self] (lyricsO: [Lyrics]?) in
             self?.turnOffActivityIndicator()
-            if (tracks != nil){
-                print("Results received: \(tracks ?? [])")
-                self?.tracksArray = tracks!
-                self?.resultsCollectionView.reloadData()
+            if (lyricsO != nil){
+                print("Results received:)")
             } else {
                 print ("No results received")
             }

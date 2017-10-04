@@ -27,6 +27,10 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.activityIndicator.isHidden = true
         setUpCollectionView()
         self.navigationController?.navigationBar.isHidden = true
+        
+        self.searchTextField.text = "Post Malone"
+        searchButtonClicked(self)
+        
     }
     
     @IBAction func searchButtonClicked(_ sender: Any) {

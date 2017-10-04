@@ -28,6 +28,7 @@
 		22E9A3511F8480C600A3B1B7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22E1F817ADF0058FC02 /* OpenSans-Bold.ttf */; };
 		22E9A3521F8480C800A3B1B7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22F1F817ADF0058FC02 /* OpenSans-Regular.ttf */; };
 		22E9A3531F8480CA00A3B1B7 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221AF22D1F817ADE0058FC02 /* OpenSans-Semibold.ttf */; };
+		22E9A3571F851E5100A3B1B7 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9A3561F851E5100A3B1B7 /* Lyrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		22E9A3481F840A8400A3B1B7 /* TracksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksCollectionViewCell.swift; sourceTree = "<group>"; };
 		22E9A34B1F840B5700A3B1B7 /* TracksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TracksCollectionViewCell.xib; sourceTree = "<group>"; };
 		22E9A34D1F841CDB00A3B1B7 /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
+		22E9A3561F851E5100A3B1B7 /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				221AF2311F8291060058FC02 /* Track.swift */,
+				22E9A3561F851E5100A3B1B7 /* Lyrics.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				222B629A1F81596200726D7E /* SearchViewController.swift in Sources */,
 				222B626E1F81593D00726D7E /* ViewController.swift in Sources */,
+				22E9A3571F851E5100A3B1B7 /* Lyrics.swift in Sources */,
 				22B9533D1F816E360068E2AC /* Utility.swift in Sources */,
 				22E9A34E1F841CDB00A3B1B7 /* ImageCacheLoader.swift in Sources */,
 				221AF2371F82C3690058FC02 /* NetworkRequest.swift in Sources */,

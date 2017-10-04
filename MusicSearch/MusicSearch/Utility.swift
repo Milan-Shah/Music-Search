@@ -36,6 +36,7 @@ extension String {
     mutating func addString (str : String){
         self = self + str
     }
+
 }
 
 extension UIColor {

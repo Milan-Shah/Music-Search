@@ -29,9 +29,24 @@ protocol ApiResource {
 
 extension ApiResource {
     func makeModel(data: Data) -> [Model]? {
-        guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
-            return nil
+        
+        
+        var json = try? JSONSerialization.jsonObject(with: data, options: [.mutableContainers,.allowFragments])
+        
+        if (json == nil){
+            let jsonString = (String(data: data, encoding: .utf8))!
+            let jsCount : Int = jsonString.count
+            let substring = jsonString[jsonString.index(of: "{")!..<jsonString.index(jsonString.index(of: "{")!, offsetBy: (jsCount - 7))] //7 Because thats the length count of "song = "
+            var js = String(substring)
+            js = js.replace(target: "'", withString: "\"")
+            js = js.replace(target: "\n", withString: " ")
+            print("JSON String : \(js)")
+            let data : Data? = js.data(using: .utf8, allowLossyConversion: false)
+            if let jsonData = data {
+                json = try? JSONSerialization.jsonObject(with: jsonData, options: [.mutableContainers,.allowFragments])
+            }
         }
+        
         guard let jsonSerialization = json as? Serialization else {
             return nil
         }
@@ -46,6 +61,13 @@ struct TracksResource: ApiResource {
     let methodPath = ""
     func makeModel(serialization: Serialization) -> Track {
         return Track(serialization: serialization)
+    }
+}
+
+struct LyricsResource: ApiResource {
+    let methodPath = ""
+    func makeModel(serialization: Serialization) -> Lyrics {
+        return Lyrics(serialization: serialization)
     }
 }
 
