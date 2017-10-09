@@ -28,8 +28,8 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         setUpCollectionView()
         self.navigationController?.navigationBar.isHidden = true
         self.searchTextField.delegate = self
-        self.searchTextField.text = "Post Malone"
-        searchButtonClicked(self)
+//        self.searchTextField.text = "Post Malone"
+//        searchButtonClicked(self)
         self.hideKeyboardWhenTappedAround()
     }
     
