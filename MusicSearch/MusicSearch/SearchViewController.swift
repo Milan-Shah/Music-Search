@@ -130,6 +130,10 @@ private extension SearchViewController {
             self?.turnOffActivityIndicator()
             if (tracks != nil){
                 print("Results received: \(tracks ?? [])")
+                if ((self?.tracksArray.count)! > 0){
+                    self?.resultsCollectionView.resetScrollPositionToTop()
+                    self?.tracksArray.removeAll()
+                }
                 self?.tracksArray = tracks!
                 self?.resultsCollectionView.reloadData()
             } else {
